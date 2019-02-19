@@ -1,4 +1,4 @@
-#testing567657
+#testing end
 import tensorflow as tf
 import tensorflow.examples.tutorials.mnist.input_data as input_data
 #define add_layer function

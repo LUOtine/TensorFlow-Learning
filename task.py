@@ -35,5 +35,5 @@ sess.run(tf.global_variables_initializer())
 for _ in range(1000):
     batch_x,batch_y = mnist.train.next_batch(100)
     sess.run(train,feed_dict={x:batch_x,y:batch_y})
-    if _ % 50 == 0:
+    if _ % 500 == 0£º
         print(compute_accuracy(mnist.test.images,mnist.test.labels))

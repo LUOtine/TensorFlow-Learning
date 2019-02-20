@@ -1,4 +1,4 @@
-#testing end
+#with hidden layer
 import tensorflow as tf
 import tensorflow.examples.tutorials.mnist.input_data as input_data
 #define add_layer function
@@ -24,7 +24,8 @@ def compute_accuracy(xs,ys):
 x = tf.placeholder(tf.float32,[None,784])
 y = tf.placeholder(tf.float32,[None,10])
 #add layer
-prediction=add_layer(x,784,10,activation_function=tf.nn.softmax)
+l1=add_layer(x,500,10,activation_function=tf.nn.relu)
+prediction=add_layer(l1,784,10,activation_function=tf.nn.softmax)
 #cross entropy
 cross_entropy=tf.reduce_mean(-tf.reduce_sum(y*tf.log(prediction),reduction_indices=[1]))
 #training
